@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>Result</title>
+		<title>Jaehyun-J</title>
+		<meta charset="UTF-8">
+		<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+		
 	</head>
 	<body><h1>YEAH SANDWICHES</h1>
-	<img src="http://bit.ly/RhrMEn" />
-		<p>I like eggs.</p>
-		<p>And ham!</p>
-		<p>But mostly sandwiches.</p>
 	</body>
+	<nav class="nav">
+		<div class="nav-container">
+			<ul>
+				<li class="transition">
+					<a href="{{ '' | prepend: site.baseurl }}/" {% if current[1] == "about" current[1] == "blog" or current[1] == "book" or current[1] == "project" %} class="normal" {% endif %} class="active">Home</a>
+				</li>
+				<li class="transition">
+					<a href="{{ '/project' | prepend: site.baseurl }}" {% if current[1] == "project" %} class="active"{% endif %} >Project</a>
+				</li>
+				<li class="transition">
+					<a href="{{ '/blog' | prepend: site.baseurl }}" {% if current[1] == "blog" %} class="active"{% endif %} >Blog</a>
+				</li>
+				<li class="transition">
+					<a href="{{ '/book' | prepend: site.baseurl }}" {% if current[1] == "book" %} class="active"{% endif %} >Book</a>
+				</li>
+			</ul>
+		</div>	
+	</nav>
 </html>
